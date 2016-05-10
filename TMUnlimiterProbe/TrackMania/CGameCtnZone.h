@@ -5,10 +5,20 @@ namespace TrackMania
 
 	class CGameCtnZone : public CMwNod
 	{
+    public:
+        enum eType
+        {
+            FLAT,
+            FRONTIER
+        };
+
+        const char*         GetName                 () const    { return m_skName.Resolve (); }
+        eType               GetType                 () const    { return m_Type; }
+
 	private:
 		StringKey			m_skName;
 		StringKey			m_sk2;
-		dword				m_bFrontier;
+		eType				m_Type;
 		dword				m_dwHeight;
 		dword				m_dwDepth;
 		dword				m_bOldZone;

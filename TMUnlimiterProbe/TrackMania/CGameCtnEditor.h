@@ -44,10 +44,7 @@ namespace TrackMania
 		virtual void			m13C							() = 0;
 		virtual void			m140							() = 0;
 
-		CGameCtnChallenge*		GetChallenge					() const
-		{
-			return m_pChallenge;
-		}
+		CGameCtnChallenge*		GetChallenge					() const    { return m_pChallenge; }
 
 	private:
 		dword					m_field14;

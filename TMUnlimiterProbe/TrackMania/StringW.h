@@ -3,15 +3,15 @@
 namespace TrackMania
 {
 
-	class StringW
+	class StringW : public Allocatable
 	{
 	public:
-		dword				GetSize				() const
+		dword				Size				() const
 		{
 			return m_dwSize;
 		}
 
-		wchar_t*			GetCStr				() const
+		wchar_t*			CStr				() const
 		{
 			return m_pwsz;
 		}

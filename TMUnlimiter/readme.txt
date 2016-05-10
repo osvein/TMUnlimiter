@@ -9,6 +9,8 @@ allows you to:
 * Place ground-only objects in the air, and air-only (or underground-only) objects
   on the ground.
 * Oversize tracks: enlarge the track area size up to a maximum of 256x256! (see further below)
+* Place blocks from external environments (i.e. environments other than the one
+  your track was made for)
 
 The tool was made for version 2.11.26, though it's written to keep working for
 at least a few upcoming versions.
@@ -41,6 +43,33 @@ is retained, both for editing and playing the track.
 For regular blockmixing (e.g. placing overlapping blocks) however, you only need to
 run TMUnlimiter while creating the map; playing can be done without it.
 
+Environment mixing
+------------------
+TMUnlimiter changes the track editor menu: the top level of icons now represents
+the different environments. Clicking one of the icons will show that environment's
+block categories as before. You can now place blocks from different environments
+in your track at leisure.
+
+IMPORTANT: for *playing* tracks that use environment mixing, you *also* need to
+run TMUnlimiter. If you don't, TrackMania will simply give you an error about
+missing blocks and refuse to load the track.
+
+Another thing to keep in mind is that the minimal block size can vary between
+environments (i.e. the actual size of a 1x1x1 block, or the size of the placement
+cursor in the track editor). This can cause blocks not to line up properly.
+For example, Coast blocks are much smaller than Island blocks, and if you place
+Coast blocks next to each other in an Island track, there will be a gap between them.
+For the best results, only combine environments where at least the horizontal
+block sizes match.
+
+The block sizes for each environment are:
+	Bay: 32x32x8
+	Coast: 16x16x4
+	Desert: 32x32x16
+	Island: 64x64x8
+	Snow: 32x32x16
+	Stadium: 32x32x8
+	Rally: 32x32x8
 
 Disclaimer
 ----------

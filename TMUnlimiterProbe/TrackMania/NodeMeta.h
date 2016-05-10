@@ -3,12 +3,22 @@
 namespace TrackMania
 {
 
-	class NodeMeta
+	class NodeMeta : public Allocatable
 	{
 	public:
-		dword			m_dwUID;
-		dword			m_dwEnvironment;
-		dword			m_dwAuthor;
+        bool            operator==              ( const NodeMeta& other ) const
+        {
+            return m_skUID == other.m_skUID && m_skEnvironment == other.m_skEnvironment;
+        }
+
+        bool            operator!=              ( const NodeMeta& other ) const
+        {
+            return !(*this == other);
+        }
+
+		StringKey       m_skUID;
+		StringKey       m_skEnvironment;
+		StringKey       m_skAuthor;
 	};
 
 }

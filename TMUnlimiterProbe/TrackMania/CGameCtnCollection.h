@@ -6,22 +6,22 @@ namespace TrackMania
 	class CGameCtnCollection : public CMwNod
 	{
 	public:
-		char*					GetEnvironmentName			() const
-		{
-			return m_skEnvironment.Resolve ();
-		}
+		const char*             GetEnvironmentName          () const    { return m_skEnvironment.Resolve (); }
+        dword                   GetEnvironmentNameKey       () const    { return m_skEnvironment.GetKey (); }
 
-		CGameCtnZone*			GetZoneByBlockInfo			( CGameCtnBlockInfo* pBlockInfo ) const;
+		static CGameCtnZone*    GetZoneByBlockInfo			( CGameCtnBlockInfo* pBlockInfo );
 
-		CGameCtnZone*			GetDefaultZone				() const
-		{
-			return m_pDefaultZone;
-		}
+		CGameCtnZone*			GetDefaultZone				() const    { return m_pDefaultZone; }
+
+        float                   GetSquareSize               () const    { return m_fSquareSize; }
+        float                   GetSquareHeight             () const    { return m_fSquareHeight; }
 
 	private:
-		List<void*>				m_CompleteZoneList;
-		List<void*>				m_Zones1;
-		List<void*>				m_Zones2;
+        static CGameCtnZone*    GetZoneFromListByBlockInfo  ( List < CGameCtnZone* >& list, CGameCtnBlockInfo* pBlockInfo );
+
+		List < CGameCtnZone* >  m_CompleteZoneList;
+		List < CGameCtnZone* >  m_Zones1;
+		List < CGameCtnZone* >  m_Zones2;
 		CGameCtnZone*			m_pDefaultZone;
 		dword					m_field3C;
 		dword					m_field40;

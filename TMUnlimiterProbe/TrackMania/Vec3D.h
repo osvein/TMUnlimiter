@@ -3,7 +3,7 @@
 namespace TrackMania
 {
 
-	class Vec3D
+	class Vec3D : public Allocatable
 	{
 	public:
 		float		X;

@@ -3,7 +3,7 @@
 namespace TrackMania
 {
 
-	class Iso4
+	class Iso4 : public Allocatable
 	{
 	public:
 		float		_11;

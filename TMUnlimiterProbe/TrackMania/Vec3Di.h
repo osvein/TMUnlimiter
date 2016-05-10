@@ -3,7 +3,7 @@
 namespace TrackMania
 {
 
-	class Vec3Di
+	class Vec3Di : public Allocatable
 	{
 	public:
 						Vec3Di			()

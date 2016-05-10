@@ -4,7 +4,7 @@ namespace TrackMania
 {
 
 	template<typename T>
-	class Array
+	class Array : public Allocatable
 	{
 	public:
 		dword				Size				() const
@@ -14,17 +14,27 @@ namespace TrackMania
 
 		T&					operator[]			( int index )
 		{
-			return pElems [ index ];
+			return m_pBuffer [ index ];
 		}
 
 		const T&			operator[]			( int index ) const
 		{
-			return pElems [ index ];
+			return m_pBuffer [ index ];
 		}
 
-	private:
+        bool                Contains            ( const T& item ) const
+        {
+            for ( int i = 0; i < m_dwSize; i++ )
+            {
+                if ( (*this)[i] == item )
+                    return true;
+            }
+            return false;
+        }
+
+    protected:
 		dword				m_dwSize;
-		T*					pElems;
+		T*					m_pBuffer;
 	};
 
 }

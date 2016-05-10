@@ -6,50 +6,18 @@ namespace TrackMania
 	class CGameCtnBlock : public CMwNod
 	{
 	public:
-		CGameCtnBlockInfo*			GetBlockInfo			() const
-		{
-			return m_pBlockInfo;
-		}
+        NodeMeta*                   GetBlockMeta            ()          { return &m_Meta; }
+		CGameCtnBlockInfo*			GetBlockInfo			() const    { return m_pBlockInfo; }
+		Vec3Di						GetPosition				() const    { return m_pos; }
+		dword						GetRotation				() const    { return m_dwRot; }
+		dword						GetFlags				() const    { return m_dwFlags; }
 
-		Vec3Di						GetPosition				() const
-		{
-			return m_pos;
-		}
+		void						SetPosition				( Vec3Di pos )      { m_pos = pos; }
+		void						SetRotation				( dword dwRot )     { m_dwRot = dwRot; }
+		void						SetFlags				( dword dwFlags )   { m_dwFlags = dwFlags; }
 
-		dword						GetRotation				() const
-		{
-			return m_dwRot;
-		}
-
-		dword						GetFlags				() const
-		{
-			return m_dwFlags;
-		}
-
-		void						SetPosition				( Vec3Di pos )
-		{
-			m_pos = pos;
-		}
-
-		void						SetRotation				( dword dwRot )
-		{
-			m_dwRot = dwRot;
-		}
-
-		void						SetFlags				( dword dwFlags )
-		{
-			m_dwFlags = dwFlags;
-		}
-
-		int							NumBlockUnits			() const
-		{
-			return m_BlockUnits.Size ();
-		}
-
-		CGameCtnBlockUnit*			GetBlockUnit			( int i ) const
-		{
-			return m_BlockUnits [ i ];
-		}
+		int							NumBlockUnits			() const            { return m_BlockUnits.Size (); }
+        CGameCtnBlockUnit*			GetBlockUnit			( int i ) const     { return m_BlockUnits [ i ]; }
 
 		bool						OccupiesPosition		( Vec3Di pos ) const
 		{

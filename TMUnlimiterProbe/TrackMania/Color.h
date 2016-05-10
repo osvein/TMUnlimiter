@@ -3,7 +3,7 @@
 namespace TrackMania
 {
 
-	class Color
+	class Color : public Allocatable
 	{
 	public:
 		float		R;

@@ -1,5 +1,8 @@
 #pragma once
 
+#define INI_FILENAME "TMUnlimiter.ini"
+#define INI_TRACKSIZES "NewTrackSizes"
+
 class Settings
 {
 public:

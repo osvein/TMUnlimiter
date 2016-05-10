@@ -44,6 +44,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -68,6 +69,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;EDITORPATCHER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -78,30 +80,53 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
-    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="Hooks\Editor\BlockMixHooks.h" />
+    <ClInclude Include="Hooks\Editor\EnvironmentMixHooks.h" />
+    <ClInclude Include="Hooks\HooksBase.h" />
     <ClInclude Include="PatternFinder.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="StdInc.h" />
+    <ClInclude Include="TrackMania\Allocatable.h" />
     <ClInclude Include="TrackMania\Array.h" />
+    <ClInclude Include="TrackMania\CGameCtnArticle.h" />
     <ClInclude Include="TrackMania\CGameCtnBlock.h" />
     <ClInclude Include="TrackMania\CGameCtnBlockInfo.h" />
     <ClInclude Include="TrackMania\CGameCtnBlockUnit.h" />
     <ClInclude Include="TrackMania\CGameCtnBlockUnitInfo.h" />
+    <ClInclude Include="TrackMania\CGameCtnCatalog.h" />
     <ClInclude Include="TrackMania\CGameCtnChallenge.h" />
+    <ClInclude Include="TrackMania\CGameCtnChapter.h" />
     <ClInclude Include="TrackMania\CGameCtnCollection.h" />
     <ClInclude Include="TrackMania\CGameCtnCollector.h" />
+    <ClInclude Include="TrackMania\CGameCtnCollectorList.h" />
     <ClInclude Include="TrackMania\CGameCtnCursor.h" />
     <ClInclude Include="TrackMania\CGameCtnDecoration.h" />
     <ClInclude Include="TrackMania\CGameCtnDecorationSize.h" />
     <ClInclude Include="TrackMania\CGameCtnEditor.h" />
     <ClInclude Include="TrackMania\CGameCtnFieldUnit.h" />
+    <ClInclude Include="TrackMania\CGameCtnPylonColumn.h" />
+    <ClInclude Include="TrackMania\CGameCtnZoneFlat.h" />
+    <ClInclude Include="TrackMania\CGameCtnZoneFrontier.h" />
     <ClInclude Include="TrackMania\CMwNod.h" />
     <ClInclude Include="TrackMania\Color.h" />
+    <ClInclude Include="TrackMania\CSystemFid.h" />
+    <ClInclude Include="TrackMania\CSystemFidFile.h" />
+    <ClInclude Include="TrackMania\CSystemFidParameters.h" />
+    <ClInclude Include="TrackMania\CSystemFids.h" />
+    <ClInclude Include="TrackMania\CSystemFidsFolder.h" />
     <ClInclude Include="TrackMania\CTrackManiaEditor.h" />
+    <ClInclude Include="TrackMania\CTrackManiaEditorIcon.h" />
+    <ClInclude Include="TrackMania\CTrackManiaEditorIconPage.h" />
+    <ClInclude Include="TrackMania\CTrackManiaEditorInterface.h" />
     <ClInclude Include="TrackMania\Iso4.h" />
     <ClInclude Include="TrackMania\List.h" />
     <ClInclude Include="TrackMania\NodeMeta.h" />
+    <ClInclude Include="TrackMania\SParam.h" />
+    <ClInclude Include="TrackMania\SParam_Fid.h" />
+    <ClInclude Include="TrackMania\SParam_Fids.h" />
+    <ClInclude Include="TrackMania\SParam_Fid_Common.h" />
+    <ClInclude Include="TrackMania\SParam_Id.h" />
     <ClInclude Include="TrackMania\StringA.h" />
     <ClInclude Include="TrackMania\StringKey.h" />
     <ClInclude Include="TrackMania\StringW.h" />
@@ -111,7 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
-    <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="Hooks\Editor\BlockMixHooks.cpp" />
+    <ClCompile Include="Hooks\Editor\EnvironmentMixHooks.cpp" />
+    <ClCompile Include="Hooks\HooksBase.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PatternFinder.cpp" />
     <ClCompile Include="Settings.cpp" />
@@ -119,13 +146,30 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TrackMania\Allocatable.cpp" />
     <ClCompile Include="TrackMania\CGameCtnBlockUnit.cpp" />
+    <ClCompile Include="TrackMania\CGameCtnCatalog.cpp" />
+    <ClCompile Include="TrackMania\CGameCtnChapter.cpp" />
     <ClCompile Include="TrackMania\CGameCtnCollection.cpp" />
     <ClInclude Include="TrackMania\CGameCtnZone.h" />
+    <ClCompile Include="TrackMania\CGameCtnZoneFlat.cpp" />
+    <ClCompile Include="TrackMania\CMwNod.cpp" />
+    <ClCompile Include="TrackMania\CSystemFid.cpp" />
+    <ClCompile Include="TrackMania\CSystemFidParameters.cpp" />
+    <ClCompile Include="TrackMania\CTrackManiaEditorIcon.cpp" />
+    <ClCompile Include="TrackMania\CTrackManiaEditorIconPage.cpp" />
+    <ClCompile Include="TrackMania\CTrackManiaEditorInterface.cpp" />
+    <ClCompile Include="TrackMania\SParam_Id.cpp" />
+    <ClCompile Include="TrackMania\StringA.cpp" />
     <ClCompile Include="TrackMania\StringKey.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TMUnlimiterProbe.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TMUnlimiter.ini">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
