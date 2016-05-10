@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EditorPatcher</RootNamespace>
+    <ProjectName>TMUnlimiterProbe</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>D:\TrackMania United\Forever\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EDITORPATCHER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;EDITORPATCHER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="PatternFinder.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="StdInc.h" />
+    <ClInclude Include="TrackMania\Array.h" />
+    <ClInclude Include="TrackMania\CGameCtnBlock.h" />
+    <ClInclude Include="TrackMania\CGameCtnBlockInfo.h" />
+    <ClInclude Include="TrackMania\CGameCtnBlockUnit.h" />
+    <ClInclude Include="TrackMania\CGameCtnBlockUnitInfo.h" />
+    <ClInclude Include="TrackMania\CGameCtnChallenge.h" />
+    <ClInclude Include="TrackMania\CGameCtnCollection.h" />
+    <ClInclude Include="TrackMania\CGameCtnCollector.h" />
+    <ClInclude Include="TrackMania\CGameCtnCursor.h" />
+    <ClInclude Include="TrackMania\CGameCtnDecoration.h" />
+    <ClInclude Include="TrackMania\CGameCtnDecorationSize.h" />
+    <ClInclude Include="TrackMania\CGameCtnEditor.h" />
+    <ClInclude Include="TrackMania\CGameCtnFieldUnit.h" />
+    <ClInclude Include="TrackMania\CMwNod.h" />
+    <ClInclude Include="TrackMania\Color.h" />
+    <ClInclude Include="TrackMania\CTrackManiaEditor.h" />
+    <ClInclude Include="TrackMania\Iso4.h" />
+    <ClInclude Include="TrackMania\List.h" />
+    <ClInclude Include="TrackMania\NodeMeta.h" />
+    <ClInclude Include="TrackMania\StringA.h" />
+    <ClInclude Include="TrackMania\StringKey.h" />
+    <ClInclude Include="TrackMania\StringW.h" />
+    <ClInclude Include="TrackMania\Vec2D.h" />
+    <ClInclude Include="TrackMania\Vec3D.h" />
+    <ClInclude Include="TrackMania\Vec3Di.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PatternFinder.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="StdInc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TrackMania\CGameCtnBlockUnit.cpp" />
+    <ClCompile Include="TrackMania\CGameCtnCollection.cpp" />
+    <ClInclude Include="TrackMania\CGameCtnZone.h" />
+    <ClCompile Include="TrackMania\StringKey.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TMUnlimiterProbe.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

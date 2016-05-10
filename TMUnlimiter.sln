@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TMUnlimiter", "TMUnlimiter\TMUnlimiter.vcxproj", "{A45316C0-4DFD-4320-9556-0EDF7650A02F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TMUnlimiterProbe", "TMUnlimiterProbe\TMUnlimiterProbe.vcxproj", "{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A45316C0-4DFD-4320-9556-0EDF7650A02F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A45316C0-4DFD-4320-9556-0EDF7650A02F}.Debug|Win32.Build.0 = Debug|Win32
+		{A45316C0-4DFD-4320-9556-0EDF7650A02F}.Release|Win32.ActiveCfg = Release|Win32
+		{A45316C0-4DFD-4320-9556-0EDF7650A02F}.Release|Win32.Build.0 = Release|Win32
+		{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}.Debug|Win32.Build.0 = Debug|Win32
+		{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}.Release|Win32.ActiveCfg = Release|Win32
+		{EAFAC5B1-E972-498D-99B4-8ECF5AB358DF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

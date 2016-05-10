@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\TrackMania">
+      <UniqueIdentifier>{eaf7cb7b-b667-4fb6-becd-66bf4de100b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TrackMania">
+      <UniqueIdentifier>{b17b504c-ff77-4360-9f50-8d40ae3c0d11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TrackMania\Vec3Di.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\Array.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnBlock.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnBlockInfo.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnCollector.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CMwNod.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\List.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\NodeMeta.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\StringA.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdInc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnBlockUnit.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnBlockUnitInfo.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnFieldUnit.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnChallenge.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnEditor.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternFinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\Iso4.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnDecorationSize.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\Vec2D.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\Vec3D.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnDecoration.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\StringW.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnCollection.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\StringKey.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnZone.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CGameCtnCursor.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\Color.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackMania\CTrackManiaEditor.h">
+      <Filter>Header Files\TrackMania</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdInc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternFinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMania\StringKey.cpp">
+      <Filter>Source Files\TrackMania</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMania\CGameCtnBlockUnit.cpp">
+      <Filter>Source Files\TrackMania</Filter>
+    </ClCompile>
+    <ClCompile Include="TrackMania\CGameCtnCollection.cpp">
+      <Filter>Source Files\TrackMania</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TMUnlimiterProbe.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
